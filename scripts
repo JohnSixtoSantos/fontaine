@@ -1,0 +1,27 @@
+CREATE TABLE tweets
+(
+	id serial primary key,
+	tweet_text text,
+	tweet_lat numeric,
+	tweet_lon numeric,
+	tweet_user varchar(255),
+	tweet_time timestamp without time zone,
+	tweet_job text,
+	job text,
+	created_at timestamp without time zone,
+	updated_at timestamp without time zone
+);
+
+CREATE TABLE keywords
+(
+	id serial primary key,
+	key text,
+	job text
+);
+
+CREATE TABLE jobs
+(
+	id serial primary key,
+	job_name text unique,
+	description text
+);
